@@ -1,0 +1,49 @@
+# QWen3-8b Writing Assistant Configuration
+
+# Model settings
+model:
+  # Fine-tuned model (default) - Your custom model
+  name: "/mnt/data/flower/ms_workspace/other_proj/writing_llm/models/qwen2.5-7b-finetuned"
+
+  # Alternative options:
+  # Base model from HuggingFace cache:
+  # name: "Qwen/Qwen2.5-7B-Instruct"
+
+  # Local base model:
+  # name: "/mnt/data/flower/ms_workspace/other_proj/writing_llm/models/qwen2.5-7b-instruct"
+
+  device: "auto"  # auto, cuda, cpu
+  max_length: 4096
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.1
+
+# Global prompt settings
+prompts:
+  system_prompt: |
+    You are a professional writing assistant. Your role is to help users improve their writing by:
+    - Providing clear and constructive feedback
+    - Suggesting improvements for clarity, style, and grammar
+    - Maintaining the user's original voice and intent
+    - Being encouraging and supportive
+
+  writing_style: |
+    Default writing style: Professional, clear, and concise.
+    Adapt to the user's needs and preferences.
+
+  working_instructions: |
+    1. Always ask clarifying questions if the request is unclear
+    2. Provide specific, actionable suggestions
+    3. Explain your reasoning when making changes
+    4. Be respectful of the user's original work
+
+# Session settings
+session:
+  log_directory: "users"
+  auto_save: true
+  max_history: 50
+
+# UI settings
+ui:
+  show_timestamps: true
+  color_scheme: "default"

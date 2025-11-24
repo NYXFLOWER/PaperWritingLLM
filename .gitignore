@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+llm_venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# User data and logs
+users/
+*.log
+
+# Model cache
+.cache/
+
+# Models (ignore large model files but keep structure)
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.pt
+models/**/*.pth
+models/**/*.onnx
+models/**/*.h5
+models/**/pytorch_model.bin
+models/**/*.msgpack
+models/**/*.arrow
+models/**/*.gguf
+models/**/*.json
+models/**/*.jinja
+models/**/*.txt
+# Keep README and config files
+# !models/**/README.md
+# !models/**/config.json
+# !models/**/*.yaml
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+*.tmp
+.temp/
+
+# Claude Code specific
+.claude/
+.claudesync/
